@@ -1,0 +1,13 @@
+{
+  "name": "rails-and-angular",
+  "version": "0.0.0",
+  "homepage": "https://github.com/banafederico/rails-and-angular",
+  "authors": [
+    "banafederico <federico@neo.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "*"
+  }
+}
