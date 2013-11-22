@@ -1,15 +1,171 @@
-<!DOCTYPE html>
-<html data-ng-app="app">
-  <head></head>
-  <body data-ng-controller="UsersCtrl">
 
-    <ul>
-      <li data-ng-repeat="user in users">
-        {{user}}
-      </li>
-    </ul>
-
-    <script src="/bower/angular/angular.min.js"></script>
+<!doctype html>
+<html ng-app="projectsApp" ng-controller="ProjectListCtrl">
+  <head>
     <script src="/js/main.js"></script>
-  </body>
+    <script src="/js/jquery-1.7.1.min.js"></script>
+    <script src="/js/jquery.mousewheel-min.js"></script>
+    <script src="/js/jquery.terminal-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="/js/projects.js"></script>
+
+    <link href="/css/jquery.terminal.css" rel="stylesheet"/>
+    <link href="/css/general.css" rel="stylesheet"/>
+
+
+
+  </head>
+  <body ng-controller="ProjectListCtrl">
+  <div id="tilda"></div>
+    <h2>Todo</h2>
+
+
+    <div ng-controller="TodoCtrl">
+      <span>{{remaining()}} of {{todos.length}} remaining</span>
+      [ <a href="" ng-click="archive()">archive</a> ]
+      <ul class="unstyled">
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      <form ng-submit="addTodo()">
+        <input type="text" ng-model="todoText"  size="30"
+               placeholder="add new todo here">
+        <input class="btn-primary" type="submit" value="add">
+      </form>
+    </div>
+
+    <div ng-controller="TodoCtrl" id="sayHelloController-div">
+                  say Hello
+                  <a id="clickShit" ng-click="sayItBitch()">Work this Bitch</a><br>
+                   <a id="clickShit2" ng-click="UpdateFly()">Work this Bitch</a><br>
+                      
+                 </div>
+
+
+    <p>1 + 2 = {{ 1 + 2 }}</p>
+
+    <div ng-controller="ProjectCtrl">
+        <ul>
+        <li ng-repeat="phone in phones">
+        
+          {{phone.name}}
+          <img src='{{phone.snippet}}' />
+
+
+        </li>
+        </ul>
+    </div>
+    
+
+
+    <div ng-controller="UpdateFly">
+    UpdateFly:
+    <pre ng-bind-template="{{salutation}}"></pre>
+    </div>
+
+
+
+      <!--Sidebar content-->
+ 
+      Search: <input ng-model="query">
+ 
+    </div>
+    <div class="span10">
+      <!--Body content-->
+ 
+      <ul class="phones">
+        <li ng-repeat="phone in phones | filter:query">
+          {{phone.name}}
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+ 
+      Search: <input ng-model="query">
+Sort by:
+<select ng-model="orderProp">
+  <option value="name">Alphabetical</option>
+  <option value="age">Newest</option>
+</select>
+ 
+ 
+<ul class="phones">
+  <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+    {{phone.name}}
+    <p>{{phone.snippet}}</p>
+  </li>
+</ul>
+
+    <title ng-bind-template="Google Phone Gallery: {{query}}">Google Phone Gallery</title>
+    <div id="status">Current filter: {{query}}</div>
+
+
+    <div ng-controller="AccordionDemoCtrl">
+  <label class="checkbox">
+    <input type="checkbox" ng-model="oneAtATime">
+    Open only one at a time
+  </label>
+
+  <accordion close-others="oneAtATime">
+    <accordion-group heading="Static Header">
+      This content is straight in the template.
+    </accordion-group>
+    <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+      {{group.content}}
+    </accordion-group>
+    <accordion-group heading="Dynamic Body Content">
+      <p>The body of the accordion group grows to fit the contents</p>
+        <button class="btn btn-small" ng-click="addItem()">Add Item</button>
+        <div ng-repeat="item in items">{{item}}</div>
+    </accordion-group>
+    <accordion-group>
+        <accordion-heading>
+            I can have markup, too! <i class="icon-check"></i>
+        </accordion-heading>
+        This is just some content to illustrate fancy headings.
+    </accordion-group>
+  </accordion>
+</div>
+<br /><br /><br /><br /><br />
+Include HTML Templates
+
+<div ng-controller="Ctrl">
+      
+
+      <a ng-click="Ctrl()">Template</a>
+
+
+
+      
+        <div ng-model="templates" ng-include="templates.content">
+
+
+
+{{template.content}}
+
+
+</div>
+    
+    </div>
+
+<a id="clickShit" ng-click="sayItBitch()">Work this Bitch</a><br>
+
+
+<ng-include
+       src="{string}"
+       [onload="{string}"]
+       [autoscroll="{string}"]>
+</ng-include>
+
+
+<script type="text/javascript" src="/js/run-terminal.js"></script>
+
+</body>
 </html>
+
+
+

@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "angular": "*"
+    "angular": "*",
+    "angular-deckgrid": "~0.1.1"
   }
 }
