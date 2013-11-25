@@ -446,6 +446,7 @@ h6 {
   font-weight: bold;
   color: inherit;
   text-rendering: optimizelegibility;
+
 }
 
 h1 small,
@@ -461,6 +462,8 @@ h6 small {
 h1 {
   font-size: 30px;
   line-height: 36px;
+  font-family: 'Oxygen', sans-serif;
+  color:red;
 }
 
 h1 small {

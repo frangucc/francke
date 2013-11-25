@@ -1,7 +1,8 @@
-<h1>These are Frank's projects.</h1>
+<h1>Francke is a hybrid designer-developer.<br />
+He creates ambitious apps.</h1>
 
-<p>Will do something cool with these layouts shortly! ;((()()))</p>
-
+<h2>Recently: launched linx, sun-times iOS7 app, monthlys.com, groupon</h2>
+<br /><br />
       Search: <input ng-model="query">
       Sort by:
       <select ng-model="orderProp">
@@ -10,13 +11,14 @@
       </select>
 
 
+
+      <div class="row" style="padding:30px 15px 15px;">
         <div ng-repeat="phone in phones | filter:query | orderBy:orderProp"
-            class="clear" >
-          <a href="#/phones/{{phone.id}}" ><img ng-src="{{phone.imageUrl}}"></a>
-          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
+            class="col-md-3" style="display:block;height:400px;width:400px;margin-right:40px;" >
+
+         <a href="#/phones/{{phone.id}}" ><img ng-src="{{phone.imageUrl}}" width="395px;"></a>
         </div>
-     
+     </div>
 
-
+ 
 

@@ -42,11 +42,11 @@
     }, 
     "id": "dell-streak-7", 
     "images": [
-        "img/phones/dell-streak-7.0.jpg", 
-        "img/phones/dell-streak-7.1.jpg", 
-        "img/phones/dell-streak-7.2.jpg", 
-        "img/phones/dell-streak-7.3.jpg", 
-        "img/phones/dell-streak-7.4.jpg"
+        "img/screens/screen_shipmyapp5.jpg", 
+        "img/screens/screen_shipmyapp2.jpg", 
+        "img/screens/screen_shipmyapp3.jpg", 
+        "img/screens/screen_shipmyapp4.jpg", 
+        "img/screens/screen_shipmyapp.jpg"
     ], 
     "name": "Dell Streak 7", 
     "sizeAndWeight": {

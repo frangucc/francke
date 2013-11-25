@@ -29,7 +29,7 @@ $.extend_if_has = function(desc, source, array) {
         var settings = {
             prompt: '> ',
             name: 'Command Line',
-            width: '280px',
+            width: '240px',
             enabled: true,
             greetings: 'Terminal? yes or no',
             keypress: function(e) {
