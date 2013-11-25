@@ -77,11 +77,12 @@ jQuery(document).ready(function($) {
         else if (command == "home" || command == "cd home" ) { 
           window.location.href = "#/home";
         }
-        else if (command == "phones") { 
+        else if (command == "projects") { 
            window.location.href = "#/phones";
         }
+
         else if (command == "ls") { 
-            terminal.echo("<span class='termGreen';> home<br /> design<br /> code<br /> resume<br /><br /></span>", {raw: true});
+            terminal.echo("<span class='termGreen';> home<br />projects<br /> design<br /> code<br /> resume<br /><br /></span>", {raw: true});
         }
 
         else if (command == "") { 
