@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RailsAndAngular::Application.load_tasks
+FranckeRails::Application.load_tasks

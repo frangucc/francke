@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-RailsAndAngular::Application.config.secret_key_base = 'd0184a83670ca570279ec14dd2adf6bcb637cd4bee55e3af0dbc9a68bde8ce2c83ebbf34ac91fc725f34539fa83c2e453a9906b2cbb84dd5f097f32dc4c6c2c6'
+FranckeRails::Application.config.secret_key_base = 'ec68dd97608a3a030bb728b7b3f4645d51190845358a2a9634808c677f0d2a4815be6b2394b4150c85ffd7bdc53cb5b315494c8ac4b0e62a01c01fd3325c7a75'
