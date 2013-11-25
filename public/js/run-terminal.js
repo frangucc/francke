@@ -65,9 +65,14 @@ jQuery(document).ready(function($) {
 
     $('#tilda').tilda(function(command, terminal) {
         if (command == "yes") {
-          $( "#clickShit" ).click();
-        } else if (command == "") { 
-            alert("nil"); 
+          $( "#HomeButton" ).click();
+
+          // Federico, I want to make a function that passes the command to angular for evaluation. If the command hits a particular case, it will execute the appropriate command.
+
+
+
+        } else if (command == "no") { 
+             $( "#AboutButton" ).click();
         }
         else if (command == "clear") { 
             term.clear();

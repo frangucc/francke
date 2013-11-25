@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html ng-app="projectsApp" ng-controller="ProjectListCtrl">
+<meta name="fragment" content="!" />
   <head>
     <script src="/js/main.js"></script>
     <script src="/js/jquery-1.7.1.min.js"></script>
@@ -133,33 +134,109 @@ Sort by:
 <br /><br /><br /><br /><br />
 Include HTML Templates
 
-<div ng-controller="Ctrl">
-      
 
-      <a ng-click="Ctrl()">Template</a>
+<div ng-controller="MainCtrl">
+  <h1>Hello {{name}}!</h1>
+  
+  <div id="my-container"></div>
+  
+ <ul id="thumbnails">
+    <li class="thumbnail" ng-repeat="item in items" options='#my-container' itemdata='item' index="$index">
 
-
-
-      
-        <div ng-model="templates" ng-include="templates.content">
-
-
-
-{{template.content}}
-
-
+    </li>
+  </ul>
+  
 </div>
-    
+
+Colors
+
+<div ng-controller='ColorCntrl' ng-model="project.color">
+ 
+  <div >{{project.color}}</div>
+
+
+
+  <button id="HomeButton" ng-click="project.color=switchTemplate(home)">Home Button</button>
+  <button id="AboutButton" ng-click="project.color=switchTemplate(about)">About Button</button>
+
+
+  <button ng-click="project.color='red'">Purple</button>
+  <button ng-click="project.color=randomColor()">Random</button>
+  
+
+
+<span ng-switch on="isMarketplaced(image)">
+  <img ng-switch-when="true"  ng-src="{{image.value}}?wid=100&hei=100">
+  <img ng-switch-when="false" ng-src="{{image.value}}&wid=100&hei=100">
+  <img ng-switch-default      ng-src="{{image.value}}">
+</span>
+</div>
+
+
+
+
+<br /><br />
+Adding Behavior to a Scope Object
+<br /><br />
+<div ng-controller="DoubleCtrl">
+  Two times <input ng-model="num"> equals {{ double(num) }}
+</div>
+
+
+<br /><br />
+<br /><br />
+
+
+
+<div ng-controller="SpicyCtrl">
+     <button ng-click="chiliSpicy()">Chili</button>
+     <button ng-click="jalapenoSpicy()">Jalapeño</button>
+     <p>The food is {{spice}} spicy!</p>
     </div>
+
+
+<br /><br />
+
+<br /><br />
+
+
+<div ng-app="spicyApp2" ng-controller="SpicyCtrl">
+     <input ng-model="customSpice">
+     <button ng-click="spicy('chili')">Chili</button>
+     <button ng-click="spicy(customSpice)">Custom spice</button>
+     <p>The food is {{spice}} spicy!</p>
+    </div>
+
+
+
+
+<br /><br /><br /><br /><br /><br />
+
+
+<div ng-controller="FilterController as ctrl">
+      <div>
+        All entries:
+        <span ng-repeat="entry in ctrl.array">{{entry.name}} </span>
+      </div>
+      <div>
+        Entries that contain an "g":
+        <span ng-repeat="entry in ctrl.filteredArray">{{entry.name}} </span>
+      </div>
+    </div>
+
+
+
+<br /><br /><br /><br /><br /><br />
+
+
+
+<br /><br /><br /><br /><br /><br />
+
 
 <a id="clickShit" ng-click="sayItBitch()">Work this Bitch</a><br>
 
 
-<ng-include
-       src="{string}"
-       [onload="{string}"]
-       [autoscroll="{string}"]>
-</ng-include>
+
 
 
 <script type="text/javascript" src="/js/run-terminal.js"></script>
