@@ -29,15 +29,10 @@
   <script src="js/services.js"></script>
 </head>
 <body>
-<div id="mainLeft" style="width:25%;float:left;">
- <div id="tilda" class="tilda"></div>
- <br />
-</div>
-<div id="mainRight" style="width:65%;float:left;">
 
+  <!-- div id="showTerminal"><img src="/app/img/terminal_icon.png" width="30px;" /></div -->
 
-
-  <div id="showTerminal"><img src="/app/img/terminal_icon.png" width="30px;" /></div>
+  {{Projects.projectId}}
  
   <div class="container" style="margin-top:0px;">
   <div class="row"  ng-controller="HomeCtrl">
@@ -59,7 +54,7 @@
               <dd>Papers</dd>
             </dl>
           </div -->
-          <div class="col-md-10">
+          <div class="col-large66-12">
               <div ng-view class="view-frame"></div>
           </div>
           
@@ -82,10 +77,6 @@
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/js/bootstrap.css">
 
   </script>
- 
-
-</div>
-
-
+  <div id="tilda" class="tilda"></div>
 </body>
 </html>
