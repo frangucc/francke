@@ -22,17 +22,23 @@ franckeApp.config(['$routeProvider',
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'
       }).
-
-
-      when('/phones', {
-        templateUrl: 'partials/phone-list.html',
+      when('/resume', {
+        templateUrl: 'partials/resume.html',
+        controller: 'ResumeCtrl'
+      }).
+      when('/resume', {
+        templateUrl: 'partials/resume.html',
         controller: 'PhoneListCtrl'
       }).
-      when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
+      when('/projects', {
+        templateUrl: 'partials/project-list.html',
+        controller: 'ProjectListCtrl'
+      }).
+      when('/projects/:projectId', {
+        templateUrl: 'partials/project-detail.html',
+        controller: 'ProjectDetailCtrl'
       }).
       otherwise({
-        redirectTo: '/phones'
+        redirectTo: '/home'
       });
   }]);

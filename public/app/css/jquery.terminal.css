@@ -28,7 +28,7 @@
     color:#fe0065;
 }
 .termGreen {
-    color:#00ef3a;
+    color:#c5e1f7;
 }
 .termBlue {
     color:#00a0c2;
@@ -52,10 +52,11 @@
 
 .terminal {
     font-family: FreeMono, monospace;
-    color: #aaa;
-    background-color: #00293c;
+    color: #fff;
+    background-color: #5d6b72;
     font-size: 15px;
     line-height: 14px;
+    
 
 }
 .terminal-output > div {

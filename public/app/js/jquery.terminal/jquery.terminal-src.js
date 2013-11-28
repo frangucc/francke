@@ -2555,10 +2555,26 @@
         // -----------------------------------------------------------------------
         function show_greetings() {
             if (settings.greetings === undefined) {
+                
                 self.echo(self.signature);
+
+                
             } else if (settings.greetings) {
-                self.echo(settings.greetings);
+       
+                var htmlString = settings.greetings.toString();
+                
+
+                // alert(htmlString);
+                self.echo(htmlString);
+
+
+
             }
+        }
+
+        function convert_greetings() {
+            
+            $( settings.greetings ).html();
         }
         // -----------------------------------------------------------------------
         // :: Display prompt and last command
@@ -3614,12 +3630,19 @@
             if (validate('prompt', settings.prompt)) {
                 var interpreters;
                 var command_line;
+
                 make_interpreter(init_interpreter, function(interpreter) {
                     interpreters = new Stack($.extend({
                         name: settings.name,
                         prompt: settings.prompt,
-                        greetings: settings.greetings
+                        greetings: settings.greetings,
+
+
+
+                    
                     }, interpreter));
+
+
                     // CREATE COMMAND LINE
                     command_line = $('<div/>').appendTo(self).cmd({
                         prompt: settings.prompt,

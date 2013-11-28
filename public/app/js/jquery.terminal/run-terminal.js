@@ -1,4 +1,8 @@
 
+// $( '#showTerminal' ).click(function() {
+  // $('#tilda').toggle();
+// });
+
 
 String.prototype.strip = function(char) {
     return this.replace(new RegExp("^" + char + "*"), '').
@@ -29,9 +33,9 @@ $.extend_if_has = function(desc, source, array) {
         var settings = {
             prompt: '> ',
             name: 'Command Line',
-            width: '240px',
+            width: '260px',
             enabled: true,
-            greetings: 'Terminal? yes or no',
+            greetings: 'Try my Terminal? Yes/No',
             keypress: function(e) {
                 if (e.which == 96) {
                     return false;
@@ -59,32 +63,39 @@ $.extend_if_has = function(desc, source, array) {
     };
 })(jQuery);
 
+
+
 //--------------------------------------------------------------------------
 jQuery(document).ready(function($) {
-
-
+   
+// $('#tilda').hide();
+    
     $('#tilda').tilda(function(command, terminal) {
         
    
 
         if (command == "yes") {
+          terminal.echo("<span class='termGreen';><br />Rock. Try one of these commands:<br /></span><br /><span class='termGreen';> <br />ls<br /> help<br /> next<br /> home<br /><br /></span>", {raw: true});
           
-          terminal.echo("<span class='termPink';><br />Rock. Try one of these commands:<br /></span><br /><span class='termGreen';> <br />ls<br /> help<br /> next<br /> home<br /><br /></span>", {raw: true});
         } 
         else if (command == "no") { 
-            terminal.echo("Bah. Who doesn't like command <br />line interfaces?")
+            $('body').data('tilda').hide();
+            $('#mainLeft').hide();
+            $('#mainRight').addClass('bigger');
+            
+        }
+        else if (command == "resume" || command == "cd resume") { 
+           window.location.href = "#/resume";
         }
         else if (command == "home" || command == "cd home" ) { 
           window.location.href = "#/home";
         }
-        else if (command == "projects") { 
-           window.location.href = "#/phones";
+        else if (command == "projects" || command == "cd projects" ) { 
+           window.location.href = "#/projects";
         }
-
         else if (command == "ls") { 
             terminal.echo("<span class='termGreen';> home<br />projects<br /> design<br /> code<br /> resume<br /><br /></span>", {raw: true});
         }
-
         else if (command == "") { 
              window.location.href = "#/phones";
         }
@@ -93,9 +104,10 @@ jQuery(document).ready(function($) {
         }
         else if (command == "hide") { 
 
-          $('body').data('tilda').addClass('hide');
+          
             
         }
+        
         else { 
             alert("= no"); 
         }

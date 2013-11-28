@@ -1,0 +1,24 @@
+{
+    "title": "Monthlys.com", 
+    "heading": "Local goods and services as a subscription.", 
+    "connectivity": {
+        "bluetooth": "Bluetooth 2.1", 
+        "cell": "T-mobile HSPA+ @ 2100/1900/AWS/850 MHz", 
+        "gps": true, 
+        "infrared": false, 
+        "wifi": "802.11 b/g"
+    }, 
+    "description": "Imagine an app where you could turn your lawn care service on with the flip of a switch or have staple foods automatically delivered to your door each week", 
+    "tech": {
+        "framework": "Ruby on Rails, Sinatra", 
+        "servers": "Amazon EC2, S3", 
+        "APIs": "Recurly"
+    },
+    "id": "ject-monthlys", 
+    "images": [
+        "img/screens/screen_shipmyapp5.jpg", 
+        "img/screens/screen_shipmyapp2.jpg"
+    ], 
+    "name": "Monthlys.com", 
+    "partial": "app/partials/ject-monthlys.html"
+}
