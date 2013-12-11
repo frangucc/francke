@@ -18,16 +18,20 @@ var franckeApp = angular.module('franckeApp', [
 franckeApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+      when('/resume', {
+        templateUrl: 'partials/resume.html',
+        controller: 'ResumeCtrl'
+      }).
       when('/home', {
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'
       }).
       when('/resume', {
         templateUrl: 'partials/resume.html',
-        controller: 'ResumeCtrl'
+        controller: 'PhoneListCtrl'
       }).
-      when('/resume', {
-        templateUrl: 'partials/resume.html',
+      when('/skrollr-test', {
+        templateUrl: 'partials/skrollr-test.html',
         controller: 'PhoneListCtrl'
       }).
       when('/projects', {
@@ -38,6 +42,7 @@ franckeApp.config(['$routeProvider',
         templateUrl: 'partials/project-detail.html',
         controller: 'ProjectDetailCtrl'
       }).
+
       otherwise({
         redirectTo: '/home'
       });

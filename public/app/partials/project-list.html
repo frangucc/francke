@@ -1,18 +1,19 @@
-<h1>Here are some of the projects I've been involved in<br />
-</h1>
 
-<h2>Recently: launched linx, sun-times iOS7 app, monthlys.com, groupon</h2>
-<br /><br />
-      Search: <input ng-model="query">
-      Sort by:
-      <select ng-model="orderProp">
-        <option value="name">Alphabetical</option>
-        <option value="age">Newest</option>
-      </select>
+      <div class="row" id="intro" style="left:200px;width:90%;position:relative;">
+      <div class="col-md-1"></div>
+      <div class="col-md-11" style="padding:30px 15px 35px 15px;">
+        <h1>Here are some of the projects I've been involved in<br /></h1>
 
+        <h2>Recently: launched linx, sun-times iOS7 app, monthlys.com, groupon</h2>
+        <br /><br />
+        <div class="row" style="padding:0 0 0 43px;">
+          <input ng-model="query">
+          <select ng-model="orderProp">
+            <option value="name">Alphabetical</option>
+            <option value="age">Newest</option>
+          </select>
+        </div>
 
-
-      <div class="row" style="padding:30px 15px 35px 15px;">
         <div ng-repeat="project in projects | filter:query | orderBy:orderProp"
             class="col-md-2" style="display:block;height:2%;width:260px;margin:30px 30px 0px 0px;" >
 
@@ -21,6 +22,7 @@
         </div>
 
      </div>
+   </div>
 
  
 

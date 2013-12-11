@@ -35,10 +35,11 @@ $.extend_if_has = function(desc, source, array) {
             name: 'Command Line',
             width: '260px',
             enabled: true,
-            greetings: 'Try my Terminal? Yes/No',
+            greetings: 'pink terminal: yes or no',
             keypress: function(e) {
                 if (e.which == 96) {
                     return false;
+                    
                 }
             }
         };
@@ -78,7 +79,7 @@ jQuery(document).ready(function($) {
           terminal.echo("<span class='termGreen';><br />Rock. Try one of these commands:<br /></span><br /><span class='termGreen';> <br />ls<br /> help<br /> next<br /> home<br /><br /></span>", {raw: true});
           
         } 
-        else if (command == "no") { 
+        else if (command == "no" || command == "hide" || command == "quit" || command == "q!") { 
             $('body').data('tilda').hide();
             $('#mainLeft').hide();
             $('#mainRight').addClass('bigger');

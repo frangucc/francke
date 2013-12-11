@@ -1,20 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="franckeApp">
 
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
   <title>Francke's Portfolio</title>
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.css">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/bootstrap-responsive.css">
-  <link href="css/jquery.terminal.css" rel="stylesheet"/>
+  <link href="css/jquery.terminal.css" rel="stylesheet"/>   
+
 
  <!--   Terminal --> 
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-animate.js"></script>
   <script src="lib/angular/angular-resource.js"></script>
@@ -27,43 +30,30 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/services.js"></script>
+ 
+  <style>
+      .edgeLoad-EDGE-52300494 { visibility:hidden; }
+  </style>
+
+
 </head>
 <body>
 
+
+<header>
+</header>
+
+
+        
+<div class="row" id="banger">
+  <div class="col-md-12">
+
+    <div id="tilda" class="tilda"></div>
+    <div ng-view class=""></div>
+
+ </div>
+</div>
   <!-- div id="showTerminal"><img src="/app/img/terminal_icon.png" width="30px;" /></div -->
-
-  {{Projects.projectId}}
- 
-  <div class="container" style="margin-top:0px;">
-  <div class="row"  ng-controller="HomeCtrl">
-
-            
-
-          <!-- div class="col-md-2">
-            
-            <dl id="leftnav" class="leftnav">
-              <dt>Content</dt>
-              <dd>Recent Projects</dd>
-              <dd>Resume</dd>
-              <dd>References</dd>
-              <dd>Labs</dd>
-              <dd>Videos</dd>
-              <dt>Extra</dt>
-              <dd>Books</dd>
-              <dd>Conferences</dd>
-              <dd>Papers</dd>
-            </dl>
-          </div -->
-          <div class="col-large66-12">
-              <div ng-view class="view-frame"></div>
-          </div>
-          
-
-
-    </div>
-  </div>
-
-
 
 
 
@@ -71,12 +61,19 @@
   
 
   <script src="js/jquery.terminal/jquery.mousewheel-min.js"></script>
-  <script src="js/jquery.terminal/jquery.terminal-src.js"></script>
+  <script src="js/jquery.terminal/jquery.terminal-src.js" type="text/javascript" charset="utf-8"></script>
 
-  <script src="js/jquery.terminal/run-terminal.js">
+  <script src="js/jquery.terminal/run-terminal.js" type="text/javascript" charset="utf-8">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/js/bootstrap.css">
 
   </script>
-  <div id="tilda" class="tilda"></div>
+
+
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="dist/skrollr.ie.min.js"></script>
+  <![endif]-->
+
+      
 </body>
 </html>

@@ -810,6 +810,9 @@
     height: auto !important;
     overflow: visible !important;
   }
+  #intro {
+    left:5% !important;
+  }
   .tilda {
     display:none;
     border:1px solid red;

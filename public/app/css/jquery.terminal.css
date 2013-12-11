@@ -16,11 +16,11 @@
 }
 .terminal {
     padding: 45px 10px 10px 20px;
-    overflow: scroll;
-
+    overflow-y: auto;
+    margin:0px auto;
     position:fixed;
     bottom:0;
-    height:100%;
+    min-height:100%;
 
 }
 
@@ -53,7 +53,8 @@
 .terminal {
     font-family: FreeMono, monospace;
     color: #fff;
-    background-color: #5d6b72;
+    /* background-color: #00293c; */
+    background-color: #a40152;
     font-size: 15px;
     line-height: 14px;
     
